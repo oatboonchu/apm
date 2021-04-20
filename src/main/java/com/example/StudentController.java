@@ -45,4 +45,9 @@ public class StudentController implements CrudHandler {
         Student student = context.bodyAsClass(Student.class);
         this.students.put(resourceId, student);
     }
+
+    public String getStudentCount(){
+        LOGGER.info("Getting the count of Students");
+        return String.valueOf(students.size());
+    }
 }
